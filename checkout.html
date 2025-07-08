@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,42 +13,58 @@
 
     <div class="checkout-container">
         <div class="checkout-form">
+            <a href="index.html" class="logo checkout-logo">DecoHome</a>
             <h1>Checkout</h1>
+            <div id="checkout-user-info"></div>
+
             <div class="checkout-steps">
-                <div class="step"><span class="radio"></span> Contact information</div>
-                <div class="step"><span class="radio"></span> Shipping address</div>
-                <div class="step"><span class="radio"></span> Shipping method</div>
-                <div class="step active"><span class="radio-checked"></span> Payment details</div>
+                <div class="step active"><span class="radio-checked"></span> Información de Contacto</div>
+                <div class="step"><span class="radio"></span> Dirección de Envío</div>
+                <div class="step"><span class="radio"></span> Método de Envío</div>
+                <div class="step"><span class="radio"></span> Detalles de Pago</div>
             </div>
 
             <form id="payment-form">
                 <div class="card-details">
-                    <label>Card details</label>
+                    <label>Detalles de la Tarjeta</label>
                     <div class="card-icons">
                         <span>VISA</span> <span>MasterCard</span> <span>Payl</span>
                     </div>
                     <input type="text" placeholder="MM / AA" required>
                     <input type="text" placeholder="CVC" required>
                     <select required>
-                        <option value="">Country</option>
+                        <option value="">País</option>
                         <option value="US">United States</option>
                         <option value="CA">Canada</option>
                         <option value="MX">Mexico</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-pay">Pay Now</button>
+                <button type="submit" class="btn btn-pay">Pagar Ahora</button>
             </form>
         </div>
 
-        <div class="sign-in-form">
-            <h2>Sign in</h2>
-            <form>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#" class="forgot-password">Forgot your password?</a>
-                <button type="submit" class="btn btn-signin">Sign In</button>
-                <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
-            </form>
+        <div class="auth-section">
+            <div id="sign-in-container">
+                <h2>Iniciar Sesión</h2>
+                <form id="sign-in-form">
+                    <input type="email" id="signin-email" placeholder="Email" required>
+                    <input type="password" id="signin-password" placeholder="Contraseña" required>
+                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                    <button type="submit" class="btn btn-signin">Iniciar Sesión</button>
+                    <p class="auth-toggle-link">¿No tienes cuenta? <a href="#" id="show-signup">Regístrate</a></p>
+                </form>
+            </div>
+
+            <div id="sign-up-container" class="hidden">
+                <h2>Crear Cuenta</h2>
+                <form id="sign-up-form">
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Contraseña" required>
+                    <input type="password" id="signup-password-confirm" placeholder="Confirmar Contraseña" required>
+                    <button type="submit" class="btn btn-signin">Crear Cuenta</button>
+                    <p class="auth-toggle-link">¿Ya tienes cuenta? <a href="#" id="show-signin">Inicia Sesión</a></p>
+                </form>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
