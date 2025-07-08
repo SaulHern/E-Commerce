@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DecoHome - Transform Your Space</title>
+    <title>DecoHome - Transforma Tu Espacio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,8 +12,9 @@
 <body>
 
     <header class="main-header">
-        <div class="logo">DecoHome</div>
-        <nav>
+        <a href="index.html" class="logo">DecoHome</a>
+        <nav class="main-nav">
+            <div id="user-status"></div>
             <div class="cart-icon-container">
                 <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 21.7893 20.0391 21.4142 20.4142 21.0391C20.7893 20.5304 21 20.0304 21 20V6L18 2H6Z" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -28,14 +29,14 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Transform Your Space</h1>
-                <p>Discover our new collection of home decor</p>
+                <h1>Transforma Tu Espacio</h1>
+                <p>Descubre nuestra nueva colección de decoración para el hogar</p>
                 <button class="btn btn-primary">Shop Now</button>
             </div>
         </section>
 
         <section class="featured-products">
-            <h2>Featured Products</h2>
+            <h2>Productos Destacados</h2>
             <div class="product-grid" id="product-grid">
                 </div>
         </section>
@@ -43,7 +44,7 @@
 
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
-            <h3>Shopping Cart</h3>
+            <h3>Carrito de Compras</h3>
             <button class="close-btn" id="close-cart-btn">&times;</button>
         </div>
         <div class="cart-items" id="cart-items">
@@ -53,7 +54,7 @@
                 <span>Subtotal</span>
                 <span id="cart-subtotal">$0.00</span>
             </div>
-            <a href="checkout.html" class="btn btn-checkout" id="checkout-btn">Checkout</a>
+            <a href="checkout.html" class="btn btn-checkout" id="checkout-btn">Finalizar Compra</a>
         </div>
     </div>
     <div class="cart-overlay" id="cart-overlay"></div>
